@@ -3,7 +3,7 @@
 Format notes for building in Google Forms / Qualtrics:
 - Sections 1–2 are the Introduction and Demo (no questions except one comprehension check).
 - Questions marked *(optional)* should not be required. Everything else is required.
-- Replace `[DEMO VIDEO LINK]` with a hosted copy of `BS blender demo.mp4` (YouTube unlisted works) and, if you want, `[LIVE DEMO LINK]` with a hosted `baby-sim-interactive.html`.
+- Replace `[LIVE DEMO LINK]` with https://rebeccaxu.page/baby-sim/ (the full interactive simulator; unlisted, not linked from the portfolio). Optionally replace `[DEMO VIDEO LINK]` with a hosted copy of `BS blender demo.mp4` as a fallback.
 - Estimated time: intro/demo ~2 min, questions ~5 min.
 
 ---
@@ -26,18 +26,19 @@ Thank you for taking part. Baby Sim is an early-stage venture founded by a Harva
 
 ---
 
-## Section 2 — Prototype demonstration (~1.5 min)
+## Section 2 — Prototype demonstration (~2 min)
 
-Please watch the short demo below (about 1 minute) before continuing.
+Please try the interactive simulator below before continuing. It opens in a new tab; come back here when you are done. One scene takes about 2 minutes.
 
-> **[DEMO VIDEO LINK]**  
-> *(Optional: try it yourself — [LIVE DEMO LINK])*
+> **Try the simulator: [LIVE DEMO LINK]** (https://rebeccaxu.page/baby-sim/)  
+> *(Can't open it? Watch the video instead: [DEMO VIDEO LINK])*
 
-What you will see: choosing a child and age stage, a situation playing out, picking one of five responses, and the analysis screen.
+Choose an age stage, from infancy to adolescence, and pick a scene, for example a baby crying at bedtime or a toddler spilling milk at breakfast. In each scene you choose one of five responses (A–E) three times, then see how the child might experience it and which developmental areas are involved. Try a different response at any point.
 
-**Q1. Did you watch the demo?** (comprehension check)
-- Yes, the whole thing
-- Yes, part of it
+**Q1. Did you try the simulator?** (comprehension check)
+- Yes, one scene or more
+- Yes, part of a scene
+- I only watched the video
 - No, I skipped it
 
 ---

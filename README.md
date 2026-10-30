@@ -11,7 +11,21 @@ HTML directly from disk.
 
 ## Current interactive version
 
-Choose an appearance, name, and one of five age stages:
+First-time visitors see a welcome screen (what Baby Sim is, four steps, a recommended
+scene). The scene list currently offers two age stages, Baby (0–1) and Toddler (1–3),
+eight scenes in all; `AGES` in `practice.js` controls which stages appear. Each scene card
+shows a plain-language summary and the skill it practises.
+
+A scene opens with two or three narrated captions over the room; "What's going on?"
+opens the situation (what's happening, what the child might need). After each response the child replies, a mood meter moves
+and carries into the next exchange, the 3D child reacts (comfort hand, hearts, tears or
+withdrawal), and "Compare all five responses" shows the same moment five ways. Four
+scenes offer two extra exchanges. A final summary shows the mood over the scene and a
+card per exchange: what the child signalled, your response, their reaction, how it might
+feel, the areas touched, and a next step. Three first-time tips and optional synthesized
+sound (off by default) round it out. Scene text and replies live in `scene-content.js`.
+
+The model and content still cover all five stages:
 
 - Infancy: 0–1 year, trust vs. mistrust.
 - Early childhood: 1–3 years, autonomy vs. shame/doubt.
@@ -34,8 +48,8 @@ and words or actions. The ordering changes between decisions.
 
 After responding, open an analysis page to see the response pattern, one possible
 inner perspective, seven stage-specific educational factors, a qualitative direction,
-an explanation, and a repair suggestion. Some factors are marked “Not shown” when
-the moment does not illustrate them. Try another response before proceeding.
+an explanation, and a repair suggestion. Only the factors the moment involves are
+listed, with a count of the others. Try another response before proceeding.
 
 Custom responses stay unclassified unless the player explicitly selects an intended
 pattern. The prototype does not interpret free text. A self-selected pattern is
@@ -45,6 +59,21 @@ Completed sessions, analysis snapshots, and written reflections are saved in thi
 browser's local storage and can be downloaded as JSON. Previous-version journal
 entries remain readable. Start over keeps the journal. Changing browsers, clearing
 site data, or changing the server origin changes which journal is available.
+
+## Look and feel
+
+Game-dialogue layout: the 3D room fills the screen on every device. A slim heads-up
+display shows the scene, progress dots, and the child's mood as hearts. Responses are
+speech bubbles in a tray (bottom-right on desktop, a bottom sheet on phones). Menus,
+results, and the scene summary are outlined cards over the room. Ink-outlined boxes
+with a solid edge, Baloo 2 headings, and Figtree body text from Google Fonts.
+
+## Hosted copy
+
+The simulator is hosted, unlisted, at https://rebeccaxu.page/baby-sim/ from the
+portfolio-site repo's `baby-sim/` folder (`index.html` is this page with a noindex tag;
+`full.html` and `survey-demo.html` redirect to it). Copy `practice.js`,
+`parenting-model.js`, `scene-content.js`, and `simulator-ui.css` there after changing them.
 
 ## Research and limits
 
@@ -70,13 +99,14 @@ walking, pouring, a second animated person, or physical manipulation of scene ob
 ## Files and validation
 
 - `parenting-model.js`: workbook levels, developmental factors, references, age-specific conversations, and explanation helpers.
-- `practice.js`: interactive controller, analysis UI, journal, and scene props.
+- `practice.js`: interactive controller (welcome, scene list, mood, replies, comparison, summary, sound), journal, and scene props.
+- `scene-content.js`: scene summaries, needs, opening beats, child replies, and extra exchanges.
 - `baby-sim-interactive.html`: character creator, Three.js room, animation clock, responsive styles.
 - `research/parenting-development-review.md`: source review, assumptions, mappings, and limits.
 
 Run the content and routing checks with:
 
-`node --experimental-default-type=module --test tests/parenting-model.test.mjs`
+`node --experimental-default-type=module --test tests/*.mjs`
 
 `baby-sim.html` remains the original scripted demo. The Blender folder contains the
 offline render pipeline. `baby-sim-timeline.html` and its PDF are the project roadmap.
